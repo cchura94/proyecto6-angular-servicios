@@ -1,0 +1,22 @@
+<h1>Mis Publicaciones</h1>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>NOMBRE</th>
+            <th>IMAGEN</th>
+            <th>ACCION</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (publi of publicaciones; track $index) {
+            <tr>
+                <td>{{ publi.title }}</td>
+                <td>
+                    <img [src]="publi.cover_image" alt="" width="100px">
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
